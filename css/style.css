@@ -1,0 +1,157 @@
+* {
+    font-family: 'Exo 2', sans-serif;
+    --post-bar-color: #aa9d8c;
+}
+body {
+    background-color: rgb(248, 248, 229);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+body > * {
+    margin-bottom: 10px;
+}
+.header-title .subtitle, .topic-subtitle, .post-title {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+#header {
+    background: #dad2bb;
+    padding: 20px 10px;
+}
+.header-title {
+    font-size: 5em;
+    font-weight: bold;
+}
+
+
+
+
+#footer {
+    background: #dad2bb;
+    padding: 5px 20%;
+}
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    border-style: double;
+    border-width: 3px;
+    border-color: #b4ad97;
+}
+.footer-info {
+    width: 50%;
+    padding: 5px 30px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b4ad97;
+}
+
+
+
+
+.para-img {
+    float: right;
+}
+
+
+
+
+a:link {
+    color: rgb(70, 65, 53);
+}
+a:visited {
+    color: rgb(146, 133, 94);
+}
+a:hover {
+    color: rgb(165, 98, 22);
+}
+
+
+
+
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+.content {
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(218, 210, 187);
+    flex-grow: 3;
+    flex-basis: 0;
+    
+    display: flex;
+    flex-direction: column;
+}
+.content > * {
+    background-color: rgb(230, 230, 209);
+    margin: 10px;
+    padding: 10px;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+.sidebar {
+    background: #dad2bb;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.post {
+    position: relative;
+    padding: 5px;
+    margin: 15px 0;
+    border-style: solid;
+    border-width: 0 0 0 10px;
+    border-color: black;
+    z-index: 0;
+    transition: all 0.45s;
+}
+.post:before {
+    opacity: 0;
+    background-image: linear-gradient(to right, var(--post-bar-color), #dad2bb);
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.45s;
+}
+.post:hover {
+    transform: translateX(-5px);
+}
+.post:hover:before {
+    opacity: 1;
+}
+
+
+img {
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    transition: all 0.2s linear;
+}
+img:hover {
+    transform: scale(1.08);
+}
